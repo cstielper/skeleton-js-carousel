@@ -20,7 +20,7 @@ Include the minified script:
 ~~~~
 Create a new carousel instance:
 ~~~~
-const homeCarousel = new Carousel();
+var homeCarousel = new Carousel();
 homeCarousel.init();
 ~~~~
 Or, pass in an options object:
