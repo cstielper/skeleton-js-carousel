@@ -27,9 +27,10 @@ Or, pass in an options object:
 ~~~~
 var opts = {
 	elementClass: 'front-page-carousel',
-	rotateTime: 5000,
+	rotateTime: 7000,
 	arrows: false
 };
+
 const homeCarousel = new Carousel(opts);
 homeCarousel.init();
 ~~~~
