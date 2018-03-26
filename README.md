@@ -31,7 +31,7 @@ var opts = {
 	arrows: false
 };
 
-const homeCarousel = new Carousel(opts);
+var homeCarousel = new Carousel(opts);
 homeCarousel.init();
 ~~~~
 
