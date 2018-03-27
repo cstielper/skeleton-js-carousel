@@ -28,7 +28,7 @@ class Carousel {
     } else {
       /***** Setup DOM elements/classes we will need to access *****/
       domElements.wrapper = document.getElementById(this.elementId);
-      domElements.items = Array.from(
+      domElements.items = Array.prototype.slice.call(
         document.getElementById(this.elementId).firstElementChild.children
       );
       domElements.activeClass = this.activeClass;
@@ -131,7 +131,7 @@ class Arrows extends Carousel {
     // Get an array of nav buttons
     let btnsArray;
     if (hasNav) {
-      btnsArray = Array.from(domElements.navWrapper.children);
+      btnsArray = Array.prototype.slice.call(domElements.navWrapper.children);
     }
 
     // Get the index of the current active slide
@@ -169,7 +169,7 @@ class Arrows extends Carousel {
     // Get an array of nav buttons
     let btnsArray;
     if (hasNav) {
-      btnsArray = Array.from(domElements.navWrapper.children);
+      btnsArray = Array.prototype.slice.call(domElements.navWrapper.children);
     }
 
     // Get the index of the current active slide
@@ -225,7 +225,7 @@ class Nav extends Carousel {
     }
 
     // Get an array of all of the nav btns
-    const btnsArray = Array.from(item.parentElement.children);
+    const btnsArray = Array.prototype.slice.call(item.parentElement.children);
 
     // Map over the array and remove the active class for each
     btnsArray.map((elem, index) => {
